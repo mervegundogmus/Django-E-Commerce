@@ -10,7 +10,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class PropertyAdmin(admin.ModelAdmin):
     list_display = ['title', 'category', 'price', 'amount', 'status']
-    list_filter = ['status']
+    list_filter = ['status', 'category']
 
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Property, PropertyAdmin)

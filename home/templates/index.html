@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>İlk Django Sayfası</title>
-</head>
-<body>
-<h1>Selam Canım, Ben Senin Amcanım</h1>
-    <h3>Merve Gündoğmuş</h3>
-<p>
-    {{ text | safe }}
-</p>
+{% extends "homebase.html" %}
 
-</body>
-</html>
+{% block title %} Index Page {% endblock %}
+{% block keywords %} Rent House {% endblock %}
+{% block description %} {% endblock %}
+
+{% block slider %}{% include 'slider.html' %}{% endblock %}
+
+{% block sidebar %}{% include 'sidebar.html' %}{% endblock %}
+
+{% block content %}{% include 'content.html' %}{% endblock %}
+
