@@ -9,7 +9,8 @@ class PropertyImageInline(admin.TabularInline):
     extra = 5
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['title', 'description', 'status']
+    list_display = ['title', 'description','image_tag', 'status']
+    readonly_fields = ('image_tag',)
     list_filter = ['status']
 
 class PropertyAdmin(admin.ModelAdmin):
@@ -20,8 +21,8 @@ class PropertyAdmin(admin.ModelAdmin):
 
 
 class ImagesAdmin(admin.ModelAdmin):
-    list_display = ['title', 'property', 'image']
-
+    list_display = ['title', 'property', 'image_tag']
+    readonly_fields = ('image_tag',)
 
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Property, PropertyAdmin)
