@@ -2,58 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfbf69b-868d-4073-b69d-7eec32efd345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0003_images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/girl1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/house_kYvX7YK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bahçe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/banyo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/dıscephe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/house2_QeiDYez.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/house2_ttxqnoA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/house_LwyeLiI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mutfak.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/pawel-nolbert-4u2U8EO9OzY-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/salon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yatakodası.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yatakodası2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/Eshopper/images/home/girl1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/Eshopper/images/home/girl1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/Eshopper/images/home/girl2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/Eshopper/images/home/girl2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/bg_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/bg_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/bg_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/category-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/category-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/category-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/category-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/home/girl1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/images/home/girl1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/home/girl2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/images/home/girl2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/image_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/image_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/image_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/image_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/image_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/image_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/partner-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/partner-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/partner-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/partner-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/partner-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/person_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/person_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/person_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/person_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/product-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renthouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +60,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Python.manage">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -166,6 +130,9 @@
       <workItem from="1597090224764" duration="1008000" />
       <workItem from="1597092598372" duration="14386000" />
       <workItem from="1597182942460" duration="3399000" />
+      <workItem from="1597186553768" duration="1517000" />
+      <workItem from="1597197647158" duration="5793000" />
+      <workItem from="1597239533327" duration="1616000" />
     </task>
     <servers />
   </component>
@@ -211,10 +178,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1597183711444" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1597083984467">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1597202006364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597083984467" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597202006364" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/renthouse$manage.coverage" NAME="manage Coverage Results" MODIFIED="1596743237199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
