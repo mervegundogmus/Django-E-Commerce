@@ -1,0 +1,50 @@
+{% extends "homebase.html" %}
+{% load static %}
+
+{% block title %} Hakkımızda - {{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+<link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+
+{% block content %}
+	 <div id="contact-page" class="container">
+    	<div class="bg">
+	    	<div class="row">
+
+	    		<div class="col-sm-12">
+					<h2 class="title text-center">Contact <strong>Us</strong></h2>
+
+					</div>
+				</div>
+
+       <div class=""col-sm-9 padding-right">
+
+				<p>{{ setting.aboutus|safe }}</p>
+
+      </div>
+			</div>
+    		<div class="row">
+
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+
+
+				        </form>
+	    			</div>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<div class="contact-info">
+
+
+
+	    			</div>
+    			</div>
+	    	</div>
+    	</div>
+    </div><!--/#contact-page-->
+
+{% endblock %}
