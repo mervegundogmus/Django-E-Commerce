@@ -15,7 +15,7 @@ class Category(models.Model):
     description = models.CharField(max_length=30)
     image = models.ImageField(blank=True, upload_to='images/')
     status = models.CharField(max_length=10, choices=STATUS)
-    slug = models.SlugField(null=False, unique=True)
+    slug = models.SlugField(null=True, unique=True)
     parent = ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
