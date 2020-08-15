@@ -67,9 +67,13 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
+
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
+
 								<li><a href="/" class="active">Anasayfa</a></li>
+
+
 								<li class="dropdown"><a href="#">Kiralık<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Villalar</a></li>
@@ -81,17 +85,38 @@
 										<li><a href="login.html">Login</a></li>
                                     </ul>
                                 </li>
+
+
 								<li class="dropdown"><a href="/bolgeler">Bölgeler<i class="fa fa-angle-down"></i></a>
+                                {% load mptt_tags %}
+
+
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Antalya</a></li>
-                                        <li><a href="blog.html">Muğla</a></li>
-                                        <li><a href="blog.html">İzmir</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
+
+                                         {% recursetree category %}
+
+                                             <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }} </a></li>
+
+					                	{% if not node.is_leaf_node %}
+                            <ul class="children">
+							<a href="/category/{{ node.slug }}"> {{ children }} </a>
+
+
+                                        </li>
+
+                                    </ul> {% endif %}
+
+                                </li>{% endrecursetree %}
+
+
+
                                     </ul>
                                 </li>
+
                                 <li><a href="/hakkimizda">Hakkımızda</a></li>
 								<li><a href="/referanslar">Referanslar</a></li>
-								<li><a href="/iletişim">İletişim</a></li>
+								<li><a href="/iletisim">İletişim</a></li>
+
 							</ul>
 						</div>
 					</div>

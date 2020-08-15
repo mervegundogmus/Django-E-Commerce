@@ -2,38 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfbf69b-868d-4073-b69d-7eec32efd345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/images/10b55f53-da9f-488e-b8e8-9621510b491a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/1d7afda0-17f5-4d4e-8daa-62dd3ec5f717.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/35ba8d52-b444-48f3-8139-da79b5934310.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/54b1c8ef-a4aa-47c8-a36c-55db3e1cb0ab.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/5c85c86e-f5d9-4c08-80b3-9e2c712cf475.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/5c85c86e-f5d9-4c08-80b3-9e2c712cf475_lakMl91.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/67f0d7fd-704b-43ac-9fab-85c018733a53.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/67f0d7fd-704b-43ac-9fab-85c018733a53_Fh1wrxt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/770203a3-0aa8-4d2a-b8c5-9ea70aaf0f25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/81e16c07-7c29-4934-a4a5-7fd360a8644e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/8bf8e0a1-8d9c-466e-9115-03ab5f904fc4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/8c59efe4-4e10-4b39-9f86-5ab65ed4114f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/96449d3f-3828-41b1-b837-aeda2d44c552.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/964eb82a-76a1-4081-8976-44a72cbe14d6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/964eb82a-76a1-4081-8976-44a72cbe14d6_N6m1GEr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/ab23d537-e45f-4cd1-9002-20051edfc3db.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/bodrum.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/c8fcd948-c3d8-4567-98b2-6f51757123dc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/c8fcd948-c3d8-4567-98b2-6f51757123dc_Bl74Gvv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/d7f2b00f-5b69-41fd-9beb-f992f724ba54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/ead62fb6-fb60-4c9d-a0fa-8f28143fa839.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/f960c682-039c-474d-ba3a-b433865e6404.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/fethiye.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/fethiye_v9cRexR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/ff2a75d5-6fc8-447d-8ed9-35fe87b35f50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kaş.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/marmaris.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0002_auto_20200815_0341.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0004_auto_20200815_0341.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/antalya.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/aydınjpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrum_wB6B9Kp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim_eRRyzdx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/fethiye_BpN6Ysp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/kaş_5vDOogn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/marmaris_zK44fQj.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/iletişim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renthouse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renthouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -155,6 +142,8 @@
       <workItem from="1597197647158" duration="5793000" />
       <workItem from="1597239533327" duration="17062000" />
       <workItem from="1597367866791" duration="13234000" />
+      <workItem from="1597447452777" duration="2770000" />
+      <workItem from="1597450341741" duration="9618000" />
     </task>
     <servers />
   </component>
@@ -168,18 +157,18 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="181" key="#Inspections" timestamp="1596744613093">
+    <state x="0" y="181" key="#Inspections" timestamp="1597449547567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="181" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1596744613093" />
+    <state x="0" y="181" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1597449547567" />
     <state x="0" y="50" width="814" height="774" key="#Intentions" timestamp="1596744651921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="50" width="814" height="774" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1596744651921" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1597092424263">
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1597450223778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597092424263" />
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597450223778" />
     <state width="974" height="173" key="GridCell.Tab.0.bottom" timestamp="1596743261162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -204,6 +193,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597202006364" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597450650151">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1597450650151" />
     <state x="31" y="0" width="1027" height="811" key="dock-window-1" timestamp="1597434730089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
