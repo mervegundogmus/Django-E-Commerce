@@ -31,7 +31,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="{% static 'images/home/logo.png' %}" alt="" /></a>
+							<a href="index.html"><img src="{% static 'images/home/simge.png' %}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 
@@ -73,20 +73,8 @@
 								<li><a href="/" class="active">Anasayfa</a></li>
 
 
-								<li class="dropdown"><a href="#">Kiralık<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Villalar</a></li>
-                                        <li><a href="shop.html">Apartlar</a></li>
-                                        <li><a href="shop.html">Evler</a></li>
-										<li><a href="product-details.html">Details</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="login.html">Login</a></li>
-                                    </ul>
-                                </li>
 
-
-								<li class="dropdown"><a href="/bolgeler">Bölgeler<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="/kiralik">Kiralık<i class="fa fa-angle-down"></i></a>
                                 {% load mptt_tags %}
 
 
@@ -98,7 +86,7 @@
 
 					                	{% if not node.is_leaf_node %}
                             <ul class="children">
-							<a href="/category/{{ node.slug }}"> {{ children }} </a>
+
 
 
                                         </li>
@@ -111,6 +99,17 @@
 
                                     </ul>
                                 </li>
+
+
+                                <li class="dropdown"><a href="#">Emlak<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+										<li><a href="product-details.html">Details</a></li>
+										<li><a href="checkout.html">Checkout</a></li>
+										<li><a href="cart.html">Cart</a></li>
+										<li><a href="login.html">Login</a></li>
+                                    </ul>
+                                </li>
+
 
                                 <li><a href="/hakkimizda">Hakkımızda</a></li>
 								<li><a href="/referanslar">Referanslar</a></li>
