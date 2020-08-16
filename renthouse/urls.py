@@ -1,5 +1,4 @@
 """renthouse URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
@@ -31,6 +30,7 @@ urlpatterns = [
     path('hakkimizda/', views.hakkimizda, name='hakkimizda'),
     path('referanslar/', views.referanslar, name='referanslar'),
     path('iletisim/', views.iletisim, name='iletisim'),
+    path('category/<int:id>/<slug:slug>/', views.category_propertys, name='category_propertys'),
 ]
 
 if settings.DEBUG: # new
