@@ -1,83 +1,65 @@
 {% extends "homebase.html" %}
 
+{% load static %}
 
-{% block title %}{{ categorydata.title }} Bölgesi{% endblock %}
-{% block keywords %} {{ categorydata.keywords }} {% endblock %}
-{% block description %} {{ categorydata.description }} {% endblock %}
+{% block title %}{{ categorydata.title }} Evler{% endblock %}
+{% block keywords %} {{setting.keywords}} {% endblock %}
+{% block description %} {{setting.description}} {% endblock %}
 
 {% block head %}
     <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
 {% endblock %}
-
-
+{% block sidebar %}{% include 'sidebar.html' %}{% endblock %}
 {% block content %}
 
-	 <div id="contact-page" class="container">
-    	<div class="bg">
-	    	<div class="row">
 
-	    		<div class="col-sm-12">
-					<h2 class="title text-center">Kiralık <strong>{{ categorydata.title }}</strong></h2><!--features_items-->
+    <section>
+        <div class="col-sm-9 padding-right">
 
-					</div>
-				</div>
-
-       <div class=""col-sm-9 padding-right">
-
-				<p>
+            <div class="features_items"><!--features_items-->
+                <h2 class="title text-center">Kiralık</h2>
 
 
-                    <div class="col-sm-9 padding-right">
-					<div class="features_items">
-
-                        {% for rs in propertys %}
-                            {% if forloop.counter == 1 %}
-
-                            <div class="item active">
-                            {% else %}
-                                <div class="item">
-                            {% endif %}
+                {% for rs in propertys %}
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
-								<div class="single-products">
+								<div class="single-propertys">
 									<div class="productinfo text-center">
-										<img src="{{rs.image.url}}" alt="" />
-										<h2>${{ rs.price }}</h2>
-										<p>{{ rs.title }}</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-								</div>
+										<a href="/property/{{ rs.id }}/{{ rs.slug }}"><img src="{{ rs.image.url }}" alt=""> </a>
+										<h2><a href="/property/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
+                                            <h4><a href="/property/{{ rs.id }}/{{ rs.slug }}">{{rs.description}}</a></h4>
+											<h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
+                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Kirala</a>
 
+                                    </h4>
+                                    </div>
+                                </div>
+								<div class="choose">
+
+								</div>
 							</div>
 						</div>
 
-                    {% endfor %}
+                  {% endfor %}
 
 
 
 
-					</div><!--features_items--></p>
 
-      </div>
+
+
+
+
+
+
+
+
+
+
+					</div><!--features_items-->
+     		</div>
 			</div>
-    		<div class="row">
 
-	    		<div class="col-sm-8">
-	    			<div class="contact-form">
-
-
-				        </form>
-	    			</div>
-	    		</div>
-	    		<div class="col-sm-4">
-	    			<div class="contact-info">
-
-
-
-	    			</div>
-    			</div>
-	    	</div>
-    	</div>
-    </div><!--/#contact-page-->
+	</section>
 
 {% endblock %}

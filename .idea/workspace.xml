@@ -2,17 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfbf69b-868d-4073-b69d-7eec32efd345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TEMPS/Eshopper/images/home/simge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/static/images/home/simge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/ead62fb6-fb60-4c9d-a0fa-8f28143fa839_VULipfC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0005_auto_20200817_0419.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/0747f505-8a03-42c3-9d94-274bb6bf2f4a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/1960050b-bb00-43d0-b888-64b9daa6be83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/19e7141e-33bd-4892-9bcd-9435c7bc9307.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/1fb3e3f3-b1be-4054-82a7-5c07c44236c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/42fc863a-89a1-4ba9-a23d-1aa945a237b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/741594b4-b91e-4c1a-881c-4d0ffce7ccdd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/7fedb922-457a-4aa5-bbee-637ae35ce64d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/81b066e8-a4ad-497c-ada4-79498d34a1f2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/a0435b64-0d55-4ec3-bbfb-6e913763d0c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/c8b5a717-980e-4c3b-8d2f-89e5d3610335.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ed19c451-cdc4-449c-9ff0-bd9cff398aec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/f53968b4-09a4-4365-ae2a-f1419f512b07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/f53968b4-09a4-4365-ae2a-f1419f512b07_0Xs8mwY.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/f53968b4-09a4-4365-ae2a-f1419f512b07_A0P0v3r.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/Eshopper/images/home/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/images/home/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/propertys.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/propertys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renthouse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renthouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -137,7 +153,8 @@
       <workItem from="1597447452777" duration="2770000" />
       <workItem from="1597450341741" duration="9917000" />
       <workItem from="1597514404568" duration="12669000" />
-      <workItem from="1597598471967" duration="13508000" />
+      <workItem from="1597598471967" duration="27690000" />
+      <workItem from="1597661780798" duration="27707000" />
     </task>
     <servers />
   </component>
@@ -159,26 +176,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="50" width="814" height="774" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1596744651921" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597684255277">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597684255277" />
     <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1597450223778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597450223778" />
-    <state width="974" height="173" key="GridCell.Tab.0.bottom" timestamp="1596743261162">
+    <state width="1493" height="165" key="GridCell.Tab.0.bottom" timestamp="1597695197331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="974" height="173" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596743261162" />
-    <state width="974" height="173" key="GridCell.Tab.0.center" timestamp="1596743261162">
+    <state width="1493" height="165" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.0.center" timestamp="1597695197331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="974" height="173" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596743261162" />
-    <state width="974" height="173" key="GridCell.Tab.0.left" timestamp="1596743261162">
+    <state width="1493" height="165" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.0.left" timestamp="1597695197331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="974" height="173" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596743261162" />
-    <state width="974" height="173" key="GridCell.Tab.0.right" timestamp="1596743261162">
+    <state width="1493" height="165" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.0.right" timestamp="1597695197331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="974" height="173" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596743261162" />
+    <state width="1493" height="165" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.1.bottom" timestamp="1597695197331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="165" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.1.center" timestamp="1597695197331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="165" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.1.left" timestamp="1597695197331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="165" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
+    <state width="1493" height="165" key="GridCell.Tab.1.right" timestamp="1597695197331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="165" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1597695197331" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1597183711444">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -196,7 +233,14 @@
     </state>
     <state x="31" y="0" width="1027" height="811" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1597434730089" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="__exception__" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/renthouse$manage.coverage" NAME="manage Coverage Results" MODIFIED="1596743237199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/renthouse$manage.coverage" NAME="manage Coverage Results" MODIFIED="1597693754500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

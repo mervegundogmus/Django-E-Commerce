@@ -1,8 +1,7 @@
 from django.utils.safestring import mark_safe
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
-# Create your models here.
-from django.db.models import ForeignKey
+
 from django.forms import ModelForm
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -21,13 +20,14 @@ class Category(MPTTModel):
     description = models.CharField(max_length=30)
     image = models.ImageField(blank=True, upload_to='images/')
     status = models.CharField(max_length=10, choices=STATUS)
-    slug = models.SlugField(null=True, unique=True)
+    slug = models.SlugField(null=False, unique=True)
     parent = TreeForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
     class MPTTMeta:
         order_insertion_by = ['title']
+
 
     def __str__(self):
         full_path = [self.title]
@@ -39,7 +39,8 @@ class Category(MPTTModel):
 
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
-        image_tag.short_description = 'Image'
+
+    image_tag.short_description = 'Image'
 
 
 class Property(models.Model):
@@ -52,10 +53,15 @@ class Property(models.Model):
     keywords = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     image = models.ImageField(blank=True, upload_to='images/')
-    price = models.FloatField()
-    amount = models.IntegerField()
+    price = models.FloatField(blank=True)
+    floor = models.IntegerField(blank=True)
+    square_metre = models.FloatField(blank=True)
+    room = models.IntegerField(blank=True)
+    rate = models.IntegerField(blank=True)
+    address = models.TextField(blank=True)
     detail = RichTextUploadingField()
     status = models.CharField(max_length=10, choices=STATUS)
+    slug = models.SlugField(null=False, unique=True)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
@@ -64,7 +70,8 @@ class Property(models.Model):
 
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
-        image_tag.short_description = 'Image'
+
+    image_tag.short_description = 'Image'
 
 class Images(models.Model):
     property = models.ForeignKey(Property, on_delete=models.CASCADE)
@@ -76,7 +83,8 @@ class Images(models.Model):
 
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
-        image_tag.short_description = 'Image'
+
+    image_tag.short_description = 'Image'
 
 
 
