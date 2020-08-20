@@ -1,38 +1,65 @@
 {% load static %}
-			<!-- Sol menu-->
-				<div class="col-sm-9 padding-right">
-					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">İLANLAR</h2>
-						{% for rs in property %}
-                        <div class="col-sm-4">
+<!-- Sol menu-->
 
-							<div class="product-image-wrapper">
-								<div>
-										<div class="productinfo text-center">
-											<img src="{{ rs.image.url }}" alt="" />
-                                            <h2>{{rs.title}}</h2>
-                                            <p><h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Kirala</a>
-										</div>
-                                    <img src="{% static 'images/home/new.png' %}" class="new" alt="" />
-								</div>
-							</div>
+<div class="col-sm-9 padding-right">
 
-						</div>
-                        {% endfor %}
+    <div class="features_items"><!--features_items-->
 
 
-								</div>
+        <h2 class="title text-center">İLANLAR</h2>
 
-							</div>
-						</div>
+        {% for rs in daypropertys %}
+            <div class="col-sm-4">
+
+                <div class="product-image-wrapper">
+                    <div>
+                        <div class="productinfo text-center">
+                            <img src="{{ rs.image.url }}" alt=""/>
+                            <h2>{{ rs.title }}</h2>
+                            <h4>{{ rs.description }}</h4>
+                            <h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
+                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Kirala</a>
 
 
-					</div><!--features_items-->
+                        </div>
+                        <img src="{% static 'images/home/new.png' %}" class="new" alt=""/>
+                    </div>
+                </div>
 
-						</div> <!--/category-tab-->
-				    </div>
-			</div>
-		</div>
-	</section>
 
+            </div>
+        {% endfor %}
+
+
+     <h2 class="title text-center">YENİ İLANLAR</h2>
+
+        {% for rs in lastpropertys %}
+            <div class="col-sm-4">
+
+                <div class="product-image-wrapper">
+                    <div>
+                        <div class="productinfo text-center">
+                            <img src="{{ rs.image.url }}" alt=""/>
+                            <h2>{{ rs.title }}</h2>
+                            <h4>{{ rs.description }}</h4>
+                            <h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
+                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Kirala</a>
+
+                        </div>
+                        <img src="{% static 'images/home/sale.png' %}" class="sale" alt=""/>
+                    </div>
+                </div>
+
+
+            </div>
+
+ {% endfor %}
+
+
+
+            </div>
+
+    </div>
+
+
+</section>

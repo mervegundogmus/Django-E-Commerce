@@ -1,37 +1,40 @@
 {% load static %}
-
+<section
 <div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
-        <h2> KATEGORİLER </h2>
-        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-            {% load mptt_tags %}
-            {% recursetree category %}
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="dropdown-toggle " {% if not node.is_leaf_node %}
-                               data-toggle="collapse" {% endif %} data-parent="#accordian"
-                                    {% if not node.is_leaf_node %} href="#{{ node.slug }}" {% else %}
-                               href="/category/{{ node.id }}/{{ node.slug }}" {% endif %}>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="left-sidebar">
+                <h2> KATEGORİLER </h2>
+                <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                    {% load mptt_tags %}
+                    {% recursetree category %}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="dropdown-toggle " {% if not node.is_leaf_node %}
+                                       data-toggle="collapse" {% endif %} data-parent="#accordian"
+                                            {% if not node.is_leaf_node %} href="#{{ node.slug }}" {% else %}
+                                       href="/category/{{ node.id }}" {% endif %}>
                                 <span class="badge pull-right"> {% if not node.is_leaf_node %}
                                     <i class="fa fa-plus"></i> {% endif %} </span>
-                                {{ node.title }}
-                            </a>
-                        </h4>
-                    </div>
-                    {% if not node.is_leaf_node %}
-                        <div id="{{ node.slug }}" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul class="children">
-                                    <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ children }}</a></li>
-                                </ul>
+                                        {{ node.title }}
+
+
                             </div>
+                            {% if not node.is_leaf_node %}
+                                <div id="{{ node.slug }}" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="children">
+                                            <li><a href="/category/{{ node.id }}">{{ children }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% endif %}
                         </div>
-                    {% endif %}
-                </div>
-            {% endrecursetree %}
-        </div><!--/category-products-->
-    </div>
-</div>
+                    {% endrecursetree %}
+                </div><!--/category-products-->
+            </div>
+        </div>
+
+

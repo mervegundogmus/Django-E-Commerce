@@ -1,0 +1,127 @@
+{% extends "homebase.html" %}
+{% load static %}
+
+{% block title %} Özellikler - {{ property.title }} {% endblock %}
+{% block keywords %} {{ property.keywords }} {% endblock %}
+{% block description %} {{ property.description }} {% endblock %}
+
+{% block head %}
+<link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+{% block sidebar %}{% include 'sidebar.html' %}{% endblock %}
+
+{% block content %}
+
+    <section>
+    <div class="container">
+			<div class="row">
+
+			<div class="col-sm-9 padding-right">
+					<div class="product-details"><!--product-details-->
+
+						<div class="col-sm-5">
+							<div class="view-product">
+                               <h4><a href="/category/{{property.category.id}}/{{property.category.slug}}">{{property.category}}</a></h4>
+
+
+                                <img src="{{ property.image.url }}" alt="" style="width:345px;height:235px;"</div>
+
+
+							</div>
+							<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+
+								  <!-- Wrapper for slides -->
+								<div class="carousel-inner">
+										<div class="item active">
+                                            {% for rs in images %}
+										  <a href=""><img src="{{ rs.image.url }}" alt="" style="width:100px;height:70px;></a>
+                                                  {% endfor %}
+									
+
+										</div>
+										<div class="item">
+										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+										</div>
+										<div class="item">
+										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+										</div>
+
+									</div>
+ <!-- Controls -->
+								  <a class="left item-control" href="#similar-product" data-slide="prev">
+									<i class="fa fa-angle-left"></i>
+								  </a>
+								  <a class="right item-control" href="#similar-product" data-slide="next">
+									<i class="fa fa-angle-right"></i>
+								  </a>
+							</div>
+
+						</div>
+
+						<div class="col-sm-7">
+							<div class="product-information"><!--/product-information-->
+								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
+								<h2>{{ property.title }}</h2>
+								<p>{{ property.description }}</p>
+								<img src="images/product-details/rating.png" alt="" />
+								<span>
+									<span>Fiyat:{{ property.price }}₺</span>
+									<label>Star:</label>
+									<input type="text" value="{{ property.rate }}" />
+									<button type="button" class="btn btn-fefault cart">
+										<i class="fa fa-shopping-cart"></i>
+										Kirala
+									</button>
+								</span>
+								<p><b>Room:</b>{{ property.room }}</p>
+								<p><b>Floor:</b>{{ property.floor }}</p>
+								<p><b>m²:</b>{{ property.square_metre }}</p>
+								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+							</div><!--/product-information-->
+
+
+						</div>
+					</div><!--/product-details-->
+
+
+
+                	<div class="tab-pane fade active in" id="reviews" >
+								<div class="col-sm-12">
+									<ul>
+										<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
+										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+									</ul>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+									<p><b>Write Your Review</b></p>
+
+									<form action="#">
+										<span>
+											<input type="text" placeholder="Your Name"/>
+											<input type="email" placeholder="Email Address"/>
+										</span>
+										<textarea name="" ></textarea>
+										<b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
+										<button type="button" class="btn btn-default pull-right">
+											Submit
+										</button>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div><!--/category-tab-->
+
+
+
+			</div>
+		</div>
+	</section>
+
+
+
+{% endblock %}

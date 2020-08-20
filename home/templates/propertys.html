@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block title %}{{ categorydata.title }} Evler{% endblock %}
-{% block keywords %} {{setting.keywords}} {% endblock %}
-{% block description %} {{setting.description}} {% endblock %}
+{% block keywords %} {{ categorydata.keywords }} {% endblock %}
+{% block description %} {{ categorydata.description }} {% endblock %}
 
 {% block head %}
-    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
 {% endblock %}
 {% block sidebar %}{% include 'sidebar.html' %}{% endblock %}
 {% block content %}
@@ -17,49 +17,38 @@
         <div class="col-sm-9 padding-right">
 
             <div class="features_items"><!--features_items-->
-                <h2 class="title text-center">Kiralık</h2>
+                <h2 class="title text-center">Kiralık Evler</h2>
 
 
-                {% for rs in propertys %}
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-propertys">
-									<div class="productinfo text-center">
-										<a href="/property/{{ rs.id }}/{{ rs.slug }}"><img src="{{ rs.image.url }}" alt=""> </a>
-										<h2><a href="/property/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
-                                            <h4><a href="/property/{{ rs.id }}/{{ rs.slug }}">{{rs.description}}</a></h4>
-											<h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
-                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Kirala</a>
 
-                                    </h4>
-                                    </div>
+                {% for rs in property %}
+                    <div class="col-sm-4">
+
+                        <div class="product-image-wrapper">
+                            <div>
+                                <div class="productinfo text-center">
+                                    <img src="{{ rs.image.url }}" alt=""/>
+                                    <h2>{{ rs.title }}</h2>
+                                    <h4>{{ rs.description }}</h4>
+                                    <h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
+                                    <p>
+                                    <p class="title text-center">m²:{{ rs.square_metre }}</p>
+                                    <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-home"></i>Kirala</a>
+
                                 </div>
-								<div class="choose">
 
-								</div>
-							</div>
-						</div>
-
-                  {% endfor %}
+                            </div>
+                        </div>
 
 
+                    </div>
+                {% endfor %}
 
+            </div>
 
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-					</div><!--features_items-->
-     		</div>
-			</div>
-
-	</section>
+    </section>
 
 {% endblock %}
