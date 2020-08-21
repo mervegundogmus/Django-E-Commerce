@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfbf69b-868d-4073-b69d-7eec32efd345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0003_userprofile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/16052012380.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/16052012391.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1937a72-db0e-4d77-8491-6e0a1d64294a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1937a72-db0e-4d77-8491-6e0a1d64294a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/propertys_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/propertys_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renthouse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renthouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +143,7 @@
       <workItem from="1597966706184" duration="12196000" />
       <workItem from="1598015850412" duration="16013000" />
       <workItem from="1598038754832" duration="352000" />
-      <workItem from="1598039118913" duration="4560000" />
+      <workItem from="1598039118913" duration="8349000" />
     </task>
     <servers />
   </component>
