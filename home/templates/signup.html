@@ -1,0 +1,58 @@
+{% extends "homebase.html" %}
+{% load static %}
+
+{% block title %} Signup {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+<link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+
+{% block content %}
+
+      <section id="form"><!--form-->
+	<div class="container">
+			<div class="row">
+				<div class="col-md-offset-8">
+					<div class="login-form"><!--login form-->
+						<h2>Login to your account</h2>
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" role="alert">
+                            {{ message }}
+                        </div>
+                         {% endfor %}
+                        {% endif %}
+                    <form action="" method="post">
+
+                            <div class="login-account p-30 box-shadow">
+
+                              {% csrf_token %}
+                             {% for field in form %}
+                                 <p>
+                                    {{ field.label_tag }}<br>
+                                    {{ field }}
+                                    {% if field.help_text %}
+                                         <small style="color: #808080">{{ field.help_text }}</small>
+                                    {% endif %}
+                                    {% for error in field.errors %}
+                                        <p style="color: #ffaa00">{{ error }}</p>
+                                    {% endfor %}
+                                 </p>
+
+                             {% endfor %}
+
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <button class="submit-btn-1 mt-20" type="submit" value="register">Register
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+{% endblock %}

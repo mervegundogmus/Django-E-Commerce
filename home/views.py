@@ -2,8 +2,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from home.models import Setting
 from property.models import Property, Category, Images, Comment
-from django.contrib.auth import logout, authenticate, login
-
+from django.contrib.auth import logout, authenticate, login, forms
+from home.form import SearchForm, SignUpForm
 
 from django.db.models import Count
 from django.contrib import messages
@@ -100,6 +100,7 @@ def property_search(request):
             context = {
                 'propertys': propertys,
                 'category': category,
+                'form': form,
             }
             return render(request, 'propertys_search.html', context)
     return HttpResponseRedirect('/')
@@ -125,4 +126,22 @@ def login_view(request):
     category = Category.objects.all()
     context = { 'setting':setting,'category': category,}
     return render(request,'login.html',context)
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return HttpResponseRedirect('/')
+
+    form = SignUpForm()
+    category = Category.objects.all()
+    context = {'category': category,
+               'form': form,
+                   }
+    return render(request,'signup.html',context)
 
