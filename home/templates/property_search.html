@@ -1,0 +1,66 @@
+{% extends "homebase.html" %}
+{% load static %}
+
+{% block title %} Ev Arama Sonuclari {% endblock %}
+{% block keywords %} {{categorydata.description}} {% endblock %}
+{% block description %} {{categorydata.keywords}} {% endblock %}
+{% block head %}
+<link rel="shortcut icon" type="image/x-icon" href="{{ setting.icon.url }}">{% endblock %}
+
+
+{% block content %}
+<!-- BREADCRUMBS AREA START -->
+<div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="breadcrumbs">
+                    <h2 class="breadcrumbs-title">Ev Arama Sonuclari</h2>
+                    <ul class="breadcrumbs-list">
+                        <li><a href="/">Anasayfa</a></li>
+                        <li>Ev Arama Sonuclari</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS AREA END -->
+
+<!-- Start page content -->
+<section id="page-content" class="page-wrapper">
+
+
+    <!-- CONTACT AREA START -->
+    <div class="contact-area pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+
+
+                <table cellpadding="4" width="1200">
+                    <tr>
+                        <th>Image</th>
+                        <th>Property Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                    {% for rs in properties %}
+                    <tr>
+                        <td><a href="/property/{{ rs.id }}//{{ rs.slug }}/"><img src="{{ rs.image.url }}" style="width:350px;height:250px;" alt=""></a></td>
+                        <td><h4 class="product-name"><a href="/property/{{ rs.id }}/{{ rs.slug }}"> {{ rs.title }} </a></h4></td>
+                        <td><a href="/category/{{ rs.category.id }} /{{ rs.category.slug }}"> {{ rs.category }}</a></td>
+                        <td><h4>${{ rs.price }}</h4></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT AREA END -->
+
+</section>
+<!-- End page content -->
+
+
+{% endblock %}

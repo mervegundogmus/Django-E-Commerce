@@ -1,7 +1,9 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from home.models import Setting
-from property.models import Property, Category, Images
+from property.models import Property, Category, Images, Comment
+
+
 from django.db.models import Count
 from django.contrib import messages
 #Create your views here.
@@ -87,6 +89,19 @@ def property_detail(request,id,slug):
                }
     return render(request, 'property_detail.html', context)
 
+def property_search(request):
+    if request.method == 'POST': # form post edildiyse
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            category = Category.objects.all()
+            query = form.cleaned_data['query'] #formdan bilgiyi al
+            propertys = Property.objects.filter(title__icontains=query)
+            context = {
+                'propertys': propertys,
+                'category': category,
+            }
+            return render(request, 'property_search.html', context)
+    return HttpResponseRedirect('/')
 
 
 

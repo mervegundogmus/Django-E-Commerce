@@ -30,6 +30,7 @@ urlpatterns = [
     path('hakkimizda/', views.hakkimizda, name='hakkimizda'),
     path('referanslar/', views.referanslar, name='referanslar'),
     path('iletisim/', views.iletisim, name='iletisim'),
+    path('search/', views.property_search, name='property_search'),
     path('ilanlar/<int:id>', views.ilanlar, name='ilanlar'),
     path('category/<int:id>', views.ilanlar, name='ilanlar'),
 
