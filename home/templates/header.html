@@ -39,17 +39,31 @@
 
 						</div>
 					</div>
+
+                    <!-- Account -->
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                            {% if user.id is not None %}
+
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">{{ user.first_name }}</a></li>
+								<li><a href="/user/"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="/user/comments/"><i class="fa fa-star"></i> Comments</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="/logout/"><i class="fa fa-lock"></i>Log out</a></li>
+                                </ul>
+                                  {% else %}
+                                 <ul class="nav navbar-nav">
+
+								<li><a href="/login/"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
+                             {% endif %}
 						</div>
 					</div>
+
+
+                    <!-- /Account -->
 				</div>
 			</div>
 		</div><!--/header-middle-->
@@ -112,16 +126,16 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-                            <form action="/search/" method="post">
-                                {% csrf_token %}
-							<input type="query" class="input search-input" type="text" placeholder="Search">
-                                <button class="search-btn"><i class="fa fa-search"></i></button>
-                            </form>
-						</div>
-					</div>
-				</div>
+				<div class="col-sm-3">
+						 <div class="header-search clearfix">
+                        <form action="/search/" method="post">
+                            {% csrf_token %}
+                            <button class="search-icon" type="submit">
+                                <img src="{% static 'images/icons/search.png'%} " alt="">
+                            </button>
+                            <input name="query" type="text" placeholder="Search...">
+                        </form>
+                    </div>
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->

@@ -33,7 +33,8 @@ urlpatterns = [
     path('search/', views.property_search, name='property_search'),
     path('ilanlar/<int:id>', views.ilanlar, name='ilanlar'),
     path('category/<int:id>', views.ilanlar, name='ilanlar'),
-
+    path('logout/', views.logout_view, name='logout_view'),
+    path('login/', views.login_view, name='login_view'),
     path('property/<int:id>/<slug:slug>/', views.property_detail, name='property_detail'),
 
 

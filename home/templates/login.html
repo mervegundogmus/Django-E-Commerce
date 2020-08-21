@@ -1,0 +1,57 @@
+{% extends "homebase.html" %}
+{% load static %}
+
+{% block title %} Login {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+<link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+
+{% block content %}
+    <section id="form"><!--form-->
+	<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1">
+					<div class="login-form"><!--login form-->
+						<h2>Login to your account</h2>
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" role="alert">
+                            {{ message }}
+                        </div>
+                         {% endfor %}
+                        {% endif %}
+						<form action="" method="post">
+                            {% csrf_token %}
+							<input type="text" name="username" placeholder="Name" />
+							<input type="password" name="password" placeholder="Password" />
+							<span>
+								<input type="checkbox" class="checkbox">
+								Keep me signed in
+							</span>
+							<button type="submit" class="btn btn-default">Login</button>
+						</form>
+					</div><!--/login form-->
+				</div>
+				<div class="col-sm-1">
+					<h2 class="or">OR</h2>
+				</div>
+				<div class="col-sm-4">
+					<div class="signup-form"><!--sign up form-->
+						<h2>New User Signup!</h2>
+						<form action="#">
+							<input type="text" placeholder="Name"/>
+							<input type="email" placeholder="Email Address"/>
+							<input type="password" placeholder="Password"/>
+							<button type="submit" class="btn btn-default">Signup</button>
+						</form>
+					</div><!--/sign up form-->
+				</div>
+			</div>
+		</div>
+	</section><!--/form-->
+
+{% endblock %}

@@ -24,7 +24,7 @@
                                <h4><a href="/category/{{property.category.id}}/{{property.category.slug}}">{{property.category}}</a></h4>
 
 
-                                <img src="{{ property.image.url }}" alt="" style="width:345px;height:235px;"</div>
+                                <img src="{{ property.image.url }}" alt="" style="width:345px;height:235px;"/>
 
 
 							</div>
@@ -153,33 +153,32 @@
 										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
 									</ul>
 
-
-            				<div class="replay-box">
+                    <div class="replay-box">
 						<div class="row">
 							<div class="col-sm-4">
 								<h2>Leave a replay</h2>
-                                 {% if messages %}
-                                    {% for message in messages %}
+                                {% if messages %}
+                                 {% for message in messages %}
                                     <div class="alert alert-{{message.tags}}" role="alert">
                                         {{ message }}
                                     </div>
                                     {% endfor %}
                                     {% endif %}
+								<form action="/property/addcomment/{{ property.id }}" method="post">
 
-                                    <form action="/property/addcomment/{{ property.id }}" method="post">
-                                         {% csrf_token %}
 									<div class="blank-arrow">
 										<label>Your Name</label>
 									</div>
 									<span>*</span>
-									<input type="text" placeholder="write your name...">
+                                    {% csrf_token %}
+									<input type="text" name="subject" placeholder="write your name...">
 									<div class="blank-arrow">
 										<label>Email Address</label>
 									</div>
 									<span>*</span>
 									<input type="email" placeholder="your email address...">
 
-								</form>
+
 							</div>
 							<div class="col-sm-8">
 								<div class="text-area">
@@ -187,22 +186,34 @@
 										<label>Your Comment</label>
 									</div>
 									<span>*</span>
-									<textarea name="message" rows="11"></textarea>
-                                     {% if user.id is not None %}
-									<a class="btn btn-primary" href="">post comment</a>
-                                      {% else %}
-                                    <a class="btn btn-primary" href="">comment for login</a>
+									<textarea name="comment" rows="11" placeholder="Mesajinizi Giriniz"></textarea>
+                                    {% if user.id is not None %}
+                                    <button type="submit" class="btn btn-primary" href="">post comment</button>
+                                     {% else %}
+                                         <button type="submit" class="btn btn-primary" href="">comment for login</button>
                                       {% endif %}
+                                </form>
 								</div>
 							</div>
 						</div>
 					</div><!--/Repaly Box-->
-				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 		</div>
 
-
-                    </div>
                 </div>
         </div>
         </div><!--/category-tab-->
