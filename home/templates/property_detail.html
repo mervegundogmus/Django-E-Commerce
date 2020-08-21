@@ -31,33 +31,9 @@
 							<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 
 								  <!-- Wrapper for slides -->
-								<div class="carousel-inner">
-										<div class="item active">
-                                            {% for rs in images %}
-										  <a href=""><img src="{{ rs.image.url }}" alt="" style="width:100px;height:70px;></a>
-                                                  {% endfor %}
-									
 
-										</div>
-										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-
-									</div>
  <!-- Controls -->
-								  <a class="left item-control" href="#similar-product" data-slide="prev">
-									<i class="fa fa-angle-left"></i>
-								  </a>
-								  <a class="right item-control" href="#similar-product" data-slide="next">
-									<i class="fa fa-angle-right"></i>
-								  </a>
+
 							</div>
 
 						</div>
@@ -77,9 +53,9 @@
 										Kirala
 									</button>
 								</span>
-								<p><b>Room:</b>{{ property.room }}</p>
-								<p><b>Floor:</b>{{ property.floor }}</p>
-								<p><b>m²:</b>{{ property.square_metre }}</p>
+								<h2><b>Room:</b>{{ property.room }}</h2>
+								<h2><b>Floor:</b>{{ property.floor }}</h2>
+								<h2><b>m²:</b>{{ property.square_metre }}</h2>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 
@@ -87,40 +63,160 @@
 						</div>
 					</div><!--/product-details-->
 
+                    <div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Ürün Galerisi</h2>
 
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+
+								<div class="item active">
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+                                                    {% for rs in images %}
+													<img src="{{ rs.image.url }}" height="90px" width="70px" alt="" />
+                                                     {% endfor %}
+
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													{% for rs in images %}
+													<img src="{{ rs.image.url }}" height="90px" width="70px" alt="" />
+                                                     {% endfor %}
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													{% for rs in images %}
+													<img src="{{ rs.image.url }}" height="90px" width="70px" alt="" />
+                                                     {% endfor %}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>
+						</div>
+					</div><!--/recommended_items-->
+
+
+    					<div class="socials-share">
+						<a href=""><img src="{% static 'images/blog/socials.png' %}" alt=""></a>
+					</div><!--/socials-share-->
+
+
+
+					<div class="media commnets">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="{% static 'images/blog/man-one.jpg' %}" alt="">
+						</a>
+                         {% for rs in comments%}
+						<div class="media-body">
+							<h4 class="media-heading">{{ rs.user.first_name }}</h4>
+							<p>{{ rs.comment }}</p>
+							<div class="blog-socials">
+								<ul>
+									<li><a href=""><i class="fa fa-facebook"></i></a></li>
+									<li><a href=""><i class="fa fa-twitter"></i></a></li>
+									<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+									<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								<a class="btn btn-primary" href="">Other Posts</a>
+							</div>
+						</div>
+                        {% endfor %}
+
+					</div><!--Comments-->
 
                 	<div class="tab-pane fade active in" id="reviews" >
 								<div class="col-sm-12">
 									<ul>
-										<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+										<li><a href=""><i class="fa fa-user"></i>{{message.tags}}</a></li>
 										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
 									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<p><b>Write Your Review</b></p>
 
-									<form action="#">
-										<span>
-											<input type="text" placeholder="Your Name"/>
-											<input type="email" placeholder="Email Address"/>
-										</span>
-										<textarea name="" ></textarea>
-										<b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
-										<button type="button" class="btn btn-default pull-right">
-											Submit
-										</button>
-									</form>
+
+            				<div class="replay-box">
+						<div class="row">
+							<div class="col-sm-4">
+								<h2>Leave a replay</h2>
+                                 {% if messages %}
+                                    {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+
+                                    <form action="/property/addcomment/{{ property.id }}" method="post">
+                                         {% csrf_token %}
+									<div class="blank-arrow">
+										<label>Your Name</label>
+									</div>
+									<span>*</span>
+									<input type="text" placeholder="write your name...">
+									<div class="blank-arrow">
+										<label>Email Address</label>
+									</div>
+									<span>*</span>
+									<input type="email" placeholder="your email address...">
+                                        
+								</form>
+							</div>
+							<div class="col-sm-8">
+								<div class="text-area">
+									<div class="blank-arrow">
+										<label>Your Comment</label>
+									</div>
+									<span>*</span>
+									<textarea name="message" rows="11"></textarea>
+                                     {% if user.id is not None %}
+									<a class="btn btn-primary" href="">post comment</a>
+                                      {% else %}
+                                    <a class="btn btn-primary" href="">comment for login</a>
+                                      {% endif %}
 								</div>
 							</div>
-
 						</div>
-					</div><!--/category-tab-->
+					</div><!--/Repaly Box-->
+				</div>
+			</div>
+		</div>
+
+
+                    </div>
+                </div>
+        </div>
+        </div><!--/category-tab-->
 
 
 
+
+
+				</div>
 			</div>
 		</div>
 	</section>
+
+
 
 
 

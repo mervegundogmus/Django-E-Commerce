@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfbf69b-868d-4073-b69d-7eec32efd345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/property_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/0747f505-8a03-42c3-9d94-274bb6bf2f4a_czflNh4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2226b058-feb9-4a36-8861-441ca9b48ae2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/3299d95a-7cd1-4c4d-bf9e-1c8a79e51bcf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/490b7d06-89a7-47ce-a0b9-2c7086d0a76e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/a0435b64-0d55-4ec3-bbfb-6e913763d0c4_fNRB4kn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/c8b5a717-980e-4c3b-8d2f-89e5d3610335_5wXKgdi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/d7f2b00f-5b69-41fd-9beb-f992f724ba54_bps8r3H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/dıscephe_zOOnUTM.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/addcomment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0007_comment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1937a72-db0e-4d77-8491-6e0a1d64294a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1937a72-db0e-4d77-8491-6e0a1d64294a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/propertys.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/propertys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/property_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/property_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renthouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +142,8 @@
       <workItem from="1597598471967" duration="27690000" />
       <workItem from="1597661780798" duration="35463000" />
       <workItem from="1597773087765" duration="5985000" />
-      <workItem from="1597860148671" duration="16987000" />
+      <workItem from="1597860148671" duration="17175000" />
+      <workItem from="1597966706184" duration="8793000" />
     </task>
     <servers />
   </component>
@@ -175,14 +165,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="50" width="814" height="774" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1596744651921" />
-    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597780187368">
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597974386942">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1597780187368" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597684255277">
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1597974386942" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597971376743">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597684255277" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597971376743" />
     <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1597715723854">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

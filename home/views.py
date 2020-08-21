@@ -48,6 +48,7 @@ def iletisim(request):
     context = {'setting': setting, 'category': category, 'page':'iletisim'}
     return render(request, 'iletisim.html', context)
 
+
 def ilanlar(request, id):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
@@ -85,6 +86,7 @@ def property_detail(request,id,slug):
                'images' : images,
                }
     return render(request, 'property_detail.html', context)
+
 
 
 
