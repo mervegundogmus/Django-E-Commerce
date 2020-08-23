@@ -48,7 +48,8 @@ class Property(models.Model):
         ('True', 'Evet'),
         ('False', 'Hayir'),
     )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)  # relation with Category table
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True)  # relation with Category table
+    user = models.ForeignKey(User, on_delete=models.CASCADE,null=True)  # relation with Category table
     title = models.CharField(max_length=150)
     keywords = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
@@ -57,10 +58,10 @@ class Property(models.Model):
     floor = models.IntegerField(blank=True)
     square_metre = models.FloatField(blank=True)
     room = models.IntegerField(blank=True)
-    rate = models.IntegerField(blank=True)
-    address = models.TextField(blank=True)
+    rate = models.IntegerField(blank=True,null=True)
+    address = models.TextField(blank=True,null=True)
     detail = RichTextUploadingField()
-    status = models.CharField(max_length=10, choices=STATUS)
+    status = models.CharField(max_length=10, choices=STATUS,null=True)
     slug = models.SlugField(null=False, unique=True)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
@@ -141,3 +142,7 @@ class ImagesForm(ModelForm):
             'image': FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
 
         }
+class ImageFormContent(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title','image']

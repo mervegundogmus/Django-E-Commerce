@@ -5,16 +5,20 @@ from property.models import Property, Category, Images, Comment
 from django.contrib.auth import logout, authenticate, login, forms
 from home.form import SearchForm, SignUpForm
 
+from order.models import ShopCart
+
+import json
 from django.db.models import Count
 from django.contrib import messages
 #Create your views here.
 
 def index(request):
+    current_user = request.user
     setting = Setting.objects.get(pk=1)
-    sliderdata = Property.objects.all()[:6]
-    category = Category.objects.all()
-    daypropertys = Property.objects.all()[:3]
-    lastpropertys = Property.objects.all().order_by('-id')[:3]
+    sliderdata = Property.objects.filter(status=True)[:6]
+    category = Category.objects.filter(status=True)
+    daypropertys = Property.objects.filter(status=True)[:3]
+    lastpropertys = Property.objects.filter(status=True).order_by('-id')[:3]
     context = {'setting': setting,
                'page':'home',
                'sliderdata': sliderdata,
@@ -22,12 +26,13 @@ def index(request):
                'daypropertys' : daypropertys,
                'lastpropertys': lastpropertys
                }
+    request.session['cart_item'] = ShopCart.objects.filter(user_id=current_user.id).count()
     return render(request, 'index.html', context)
 
 def propertys(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    property = Property.objects.all()
+    property = Property.objects.filter(status=True)
     context = {'setting': setting,
                'category' : category,
                'property': property}
@@ -38,6 +43,43 @@ def hakkimizda(request):
     category = Category.objects.all()
     context = {'setting': setting, 'category': category, 'page':'hakkimizda'}
     return render(request, 'hakkimizda.html', context)
+
+def product_search(request):
+    if request.method=='POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            setting = Setting.objects.get(pk=1)
+            category = Category.objects.all()
+            query=form.cleaned_data['query']
+            product=Property.objects.filter(title__icontains=query,status='True')
+
+            context={
+                'products':product,
+                'setting': setting,
+                'category' : category,
+                'aratilan_kelime':query,
+
+            }
+            return render(request,'propertys_search.html',context)
+
+    return HttpResponseRedirect('/')
+
+def search_auto(request):
+    if request.is_ajax():
+
+        q = request.GET.get('term', '')
+        product = Property.objects.filter(title__icontains=q)
+        results = []
+        for pl in product:
+
+            product_json = {}
+            product_json = pl.title
+            results.append(product_json)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)
 
 def referanslar(request):
     setting = Setting.objects.get(pk=1)
@@ -58,6 +100,18 @@ def iletisim(request):
             data.save() # verirabanına kaydet
             messages.success(request, "Mesajanız başarı ile gönderilmiştir. Teşekkür Ederiz ")
             return HttpResponseRedirect('/iletisim')
+        else:
+            messages.warning(request, "Mesajanız  gönderilmedi. ")
+            return HttpResponseRedirect('/iletisim')
+    category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    form =ContactFormu()
+    context = {
+        'category': category,
+        'setting': setting,
+        'form': form,
+    }
+    return render(request, 'iletisim.html', context)
 
 
 
@@ -65,9 +119,9 @@ def ilanlar(request, id):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
     if id is not 0:
-        property = Property.objects.filter(category_id=id)
+        property = Property.objects.filter(category_id=id,status='True')
     else:
-        property = Property.objects.all()[:9]
+        property = Property.objects.filter(status=True)[:9]
     context = {'setting': setting,
                'category': category,
                'page':'ilanlar',
@@ -80,7 +134,7 @@ def category_propertys(request, id, slug):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
-    property = Property.objects.all()[:9],
+    property = Property.objects.filter(status=True)[:9],
     print(propertys)
     context = {'property': property,
                'setting': setting,
@@ -99,20 +153,6 @@ def property_detail(request,id,slug):
                }
     return render(request, 'property_detail.html', context)
 
-def property_search(request):
-    if request.method == 'POST': # form post edildiyse
-        form = SearchForm(request.POST)
-        if form.is_valid():
-            category = Category.objects.all()
-            query = form.cleaned_data['query'] #formdan bilgiyi al
-            propertys = Property.objects.filter(title__icontains=query)
-            context = {
-                'propertys': propertys,
-                'category': category,
-                'form': form,
-            }
-            return render(request, 'propertys_search.html', context)
-    return HttpResponseRedirect('/')
 
 def logout_view(request):
     logout(request)

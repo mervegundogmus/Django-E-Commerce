@@ -4,9 +4,9 @@ from . import views
 
 urlpatterns = [
     # ex: /property/
-    path('', views.index, name='index')
-    # path('addcomment/<int:id>',views.addcomment,name='addcomment'),
+    path('', views.index, name='index'),
+    path('addurun/<int:id>', views.addurun, name='addurun'),
+    path('deletefromcart/<int:id>', views.deletefromcart, name='deletefromcart'),
+    path('siparis/<int:id>', views.siparis, name='siparis')
 
-    # ex: /polls/5/
-    # path('<int:question_id>/', views.detail, name='detail'),
 ]

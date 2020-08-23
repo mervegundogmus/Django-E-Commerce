@@ -40,13 +40,6 @@
                 </div>
                 <div class="col-sm-9 col-xs-12">
                     <div class="row">
-                        {% if messages %}
-                        {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }}" roles="alert">
-                            {{message}}
-                        </div>
-                        {% endfor %}
-                        {% endif %}
                         <div>
                                 <img src="{{ user.userprofile.image.url }}"
                                      style="height:150px; border=radius:45px">

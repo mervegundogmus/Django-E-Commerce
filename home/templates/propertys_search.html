@@ -16,10 +16,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="breadcrumbs">
-                    <h2 class="breadcrumbs-title">Ev Arama Sonuclari</h2>
+                    <h2 class="breadcrumbs-title">{{ aratilan_kelime }} Sonuclari</h2>
                     <ul class="breadcrumbs-list">
                         <li><a href="/">Anasayfa</a></li>
-                        <li>Ev Arama Sonuclari</li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +44,7 @@
                         <th>Category</th>
                         <th>Price</th>
                     </tr>
-                    {% for rs in properties %}
+                    {% for rs in products %}
                     <tr>
                         <td><a href="/property/{{ rs.id }}//{{ rs.slug }}/"><img src="{{ rs.image.url }}" style="width:350px;height:250px;" alt=""></a></td>
                         <td><h4 class="product-name"><a href="/property/{{ rs.id }}/{{ rs.slug }}"> {{ rs.title }} </a></h4></td>
@@ -58,8 +57,6 @@
             </div>
         </div>
     </div>
-    <!-- CONTACT AREA END -->
-<p>{{ setting.aboutus|safe }}</p>
 </section>
 <!-- End page content -->
 

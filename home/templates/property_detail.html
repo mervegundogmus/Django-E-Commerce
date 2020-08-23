@@ -49,10 +49,18 @@
 									<span>Fiyat:{{ property.price }}₺</span>
 									<label>Star:</label>
 									<input type="text" value="{{ property.rate }}" />
-									<button type="button" class="btn btn-fefault cart">
+                                    <form action="/order/addurun/{{property.id}}" method="post">
+											{% csrf_token %}
+                                        <br>
+											<b>Ay:</b>
+											<input name="ay" class="input-box" style="width:50px;"type="number" min='1' value="1">
+											<button type="submit" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Kirala
+										Evi Kutuya Ekle
 									</button>
+
+                                </form>
+
 								</span>
 								<h2><b>Room:</b>{{ property.room }}</h2>
 								<h2><b>Floor:</b>{{ property.floor }}</h2>
@@ -64,58 +72,25 @@
 						</div>
 					</div><!--/product-details-->
 
-                    <div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">Ürün Galerisi</h2>
 
-						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
+						<h2 class="title text-center">Ev Resim Galerisi</h2>
+                        <div style="height:600px">
+							   {% for rs in images %}
+                                    <img  id="urun_image" style="margin-bottom: 5px;" src="{{ rs.image.url }}" >
 
-								<div class="item active">
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-                                                    {% for rs in images %}
-													<img src="{{ rs.image.url }}" height="90px" width="70px" alt="" />
-                                                     {% endfor %}
+								{% endfor %}
+                                    <style>
 
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													{% for rs in images %}
-													<img src="{{ rs.image.url }}" height="90px" width="70px" alt="" />
-                                                     {% endfor %}
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													{% for rs in images %}
-													<img src="{{ rs.image.url }}" height="90px" width="70px" alt="" />
-                                                     {% endfor %}
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+                                        #urun_image{
+                                            width: 400px;
+                                            position:relative;
+                                            float: left;
+                                            margin-left: 5px;
+                                        }
+                                    </style>
+                        </div>
 
-							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							  </a>
-						</div>
-					</div><!--/recommended_items-->
+
 
 
     					<div class="socials-share">
@@ -158,13 +133,7 @@
 						<div class="row">
 							<div class="col-sm-4">
 								<h2>Leave a replay</h2>
-                                {% if messages %}
-                                 {% for message in messages %}
-                                    <div class="alert alert-{{message.tags}}" role="alert">
-                                        {{ message }}
-                                    </div>
-                                    {% endfor %}
-                                    {% endif %}
+
 								<form action="/property/addcomment/{{ property.id }}" method="post">
 
 									<div class="blank-arrow">
@@ -172,7 +141,7 @@
 									</div>
 									<span>*</span>
                                     {% csrf_token %}
-									<input type="text" name="subject" placeholder="write your name...">
+									<input style="color:black !important;" type="text" name="subject" placeholder="write your name...">
 									<div class="blank-arrow">
 										<label>Email Address</label>
 									</div>

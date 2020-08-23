@@ -31,7 +31,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="{% static 'images/home/simge.png' %}" alt="" /></a>
+							<a href="/"><img src="{% static 'images/home/simge.png' %}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 
@@ -51,9 +51,7 @@
                                 <li><img src=""></li>
                                 <li><a href="#">{{ user.first_name }}</a></li>
 								<li><a href="/user/"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="/user/comments/"><i class="fa fa-star"></i> Comments</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="/user/shopcart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                 <li><a href="/logout/"><i class="fa fa-lock"></i>Log out</a></li>
                                 </ul>
                                   {% else %}
@@ -134,12 +132,41 @@
 						 <div class="header-search clearfix">
                         <form action="/search/" method="post">
                             {% csrf_token %}
-                            <button class="search-icon" type="submit">
-                                <img src="{% static 'images/icons/search.png'%} " alt="">
+                            <button style="width:30px ;
+                                            height:30px;
+                                            background-color: #8fd19e;
+                                            border:0px solid #fff;border-radius: 3px;"
+                                    class="search-icon" type="submit">
+                                <i class="fa fa-search"></i>
                             </button>
-                            <input name="query" type="text" placeholder="Search...">
+                            <input id ="query" name="query" type="text" placeholder="Anahtar Kelime">
                         </form>
+                             <script>
+
+										  $(function() {
+											$("#query").autocomplete({
+											  source: "/search_auto/",
+											  select: function (event, ui) { //item selected
+												AutoCompleteSelectHandler(event, ui)
+											  },
+											  minLength: 2,
+											});
+										  });
+
+										  function AutoCompleteSelectHandler(event, ui)
+										  {
+											var selectedObj = ui.item;
+										  }
+
+										</script>
                     </div>
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
+{% if messages %}
+                                 {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}

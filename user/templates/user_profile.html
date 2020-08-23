@@ -38,13 +38,6 @@
                     {% include "user_panel.html" %}
                 </div>
                 <div class="col-sm-9 col-xs-12">
-                    {% if messages %}
-                    {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}" roles="alert">
-                        {{message}}
-                    </div>
-                    {% endfor %}
-                    {% endif %}
 
                     <table class="table">
 
@@ -53,7 +46,7 @@
                                 Profile</a>
                                 <a href="/user/password/" class="btn btn-warning">Change Password</a></th>
                             <td class="thumb"><img src="{{ profile.image.url }}" alt=""
-                                                   style="width:100px;height:100px;"></td>
+                                                   style="width:150px;height:180px;"></td>
                         </tr>
                         <tr>
                             <th class="text-center">Ad Soyad</th>
@@ -71,22 +64,17 @@
                         </tr>
                         <tr>
                             <th class="text-center">Facebook</th>
-                            <td class="thumb">{{ profile.facebook }}</td>
+                            <td class="thumb">{{ profile.address }}</td>
                         </tr>
                         <tr>
 
-                            <th class="text-center">Skype</th>
-                            <td class="thumb">{{ profile.skype }}</td>
+                            <th class="text-center">City</th>
+                            <td class="thumb">{{ profile.city }}</td>
 
                         </tr>
                         <tr>
-                            <th class="text-center">Contact Detail</th>
-                            <td class="thumb">{{ profile.contact_detail }}</td>
-                        </tr>
-                        <tr>
-                            <th class="text-center">Ozgecmis</th>
-                            <td class="thumb">{{ profile.biography }}</td>
-                        </tr>
+                            <th class="text-center">Country</th>
+                            <td class="thumb">{{ profile.country }}</td>
                         </tr>
                     </table>
 

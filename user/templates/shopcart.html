@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 
-{% block title %}Comments{% endblock %}
+{% block title %}User ShopCart{% endblock %}
 {% block keywords %} {{setting.description}} {% endblock %}
 {% block description %} {{setting.keywords}} {% endblock %}
 {% block head %}
@@ -41,29 +41,28 @@
                     <div class="row">
                          <table class="table">
                         <tr>
+
                             <th class="text-left">Property</th>
-                            <th class="text-left">Rate</th>
-                            <th class="text-left">Subject</th>
-                            <th class="text-left">Comment</th>
-                            <th class="text-left">Status</th>
-                            <th class="text-left">Date</th>
-                            <th class="text-left">Delete</th>
+                            <th class="text-left">Ay</th>
+                            <th class="text-left">Price</th>
+                            <th class="text-left">Amount</th>
+                            <th colspan="2" class="text-left">Actions</th>
 
                         </tr>
-                        {% for rs in comments %}
+                        {% for rs in shopcart %}
                         <tr>
                             <td class="text-left">
-                                <a href="/property/{{rs.property_id}}/{{ rs.property.slug }}">
-                                    {{ rs.property.title }}
+                                <a href="/property/{{rs.urun_id}}/{{ rs.urun.slug }}">
+                                    {{ rs.urun.title }}
                                 </a>
                             </td>
-                            <td class="text-left">{{ rs.rate }}</td>
-                            <td class="text-left">{{ rs.subject }}</td>
-                            <td class="text-left">{{ rs.comment}}</td>
-                            <td class="text-left">{{ rs.status }}</td>
-                            <td class="text-left">{{ rs.create_at }}</td>
-                            <td class="text-left"><a class="btn btn-danger" href="/user/deletecomment/{{rs.id}}"
+                            <td class="text-left">{{ rs.ay }}</td>
+                            <td class="text-left">{{ rs.price }}</td>
+                            <td class="text-left">{{ rs.amount}}</td>
+                            <td class="text-left"><a class="btn btn-danger" href="/order/deletefromcart/{{rs.id}}" onclick="return confirm('Ev sepetden silinecek, eminmisin?')""
                                                      onclick="return confirm('Delete ! Are you sure ?')">Delete</a></td>
+                            <td class="text-left"><a class="btn btn-success" href="/order/siparis/{{rs.id}}" onclick="return confirm('Ev Kiralanacak, eminmisin?')""
+                                                     onclick="return confirm('Kirala ! Are you sure ?')">Kirala</a></td>
                         </tr>
                         {% endfor %}
                     </table>
