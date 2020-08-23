@@ -27,8 +27,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = (
 
+    'order.apps.OrderConfig',
+    'user.apps.UserConfig',
     'home.apps.HomeConfig',
     'property.apps.PropertyConfig',
     'django.contrib.admin',
@@ -40,7 +42,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'mptt',
-]
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

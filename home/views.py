@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from home.models import Setting
+from home.models import Setting, ContactFormu, ContactFormMessage
 from property.models import Property, Category, Images, Comment
 from django.contrib.auth import logout, authenticate, login, forms
 from home.form import SearchForm, SignUpForm
@@ -46,10 +46,19 @@ def referanslar(request):
     return render(request, 'referanslar.html', context)
 
 def iletisim(request):
-    setting = Setting.objects.get(pk=1)
-    category = Category.objects.all()
-    context = {'setting': setting, 'category': category, 'page':'iletisim'}
-    return render(request, 'iletisim.html', context)
+    if request.method == 'POST': # form post edildiyse
+        form = ContactFormu(request.POST)
+        if form.is_valid():
+            data = ContactFormMessage() # model ile bağlantı kur
+            data.name = form.cleaned_data['name'] #formdan bilgiyi al
+            data.email = form.cleaned_data['email']
+            data.subject = form.cleaned_data['subject']
+            data.message = form.cleaned_data[ 'message' ]
+            data.ip = request.META.get('REMOTE_ADDR')
+            data.save() # verirabanına kaydet
+            messages.success(request, "Mesajanız başarı ile gönderilmiştir. Teşekkür Ederiz ")
+            return HttpResponseRedirect('/iletisim')
+
 
 
 def ilanlar(request, id):
@@ -144,4 +153,3 @@ def signup_view(request):
                'form': form,
                    }
     return render(request,'signup.html',context)
-

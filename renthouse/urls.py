@@ -27,6 +27,9 @@ urlpatterns = [
     path('property/', include('property.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('order/', include('order.urls')),
+    path('user/', include('user.urls')),
+
     path('hakkimizda/', views.hakkimizda, name='hakkimizda'),
     path('referanslar/', views.referanslar, name='referanslar'),
     path('iletisim/', views.iletisim, name='iletisim'),
@@ -37,6 +40,9 @@ urlpatterns = [
     path('login/', views.login_view, name='login_view'),
     path('property/<int:id>/<slug:slug>/', views.property_detail, name='property_detail'),
     path('signup/', views.signup_view, name='signup_view'),
+
+
+
 
 
 ]

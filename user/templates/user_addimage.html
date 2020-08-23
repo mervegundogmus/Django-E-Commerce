@@ -1,0 +1,83 @@
+{% extends "homebase.html" %}
+
+{% block title %}Add Image to Property{% endblock %}
+{% block keywords %} {{setting.description}} {% endblock %}
+{% block description %} {{setting.keywords}} {% endblock %}
+{% block head %}
+<link href="{{ setting.icon.url }}" rel="shortcut icon" type="image/x-icon">
+
+{% load static %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="{% static " ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% endblock %}
+
+
+{% block content %}
+<!-- BREADCRUMBS AREA START -->
+<div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="breadcrumbs">
+                    <h2 class="breadcrumbs-title">Add Property Gallery Image</h2>
+                    <ul class="breadcrumbs-list">
+                        <li><a href="/">Anasayfa</a></li>
+                        <li>Add Property Gallery Image</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS AREA END -->
+
+
+<!-- Start page content -->
+<section class="page-wrapper" id="page-content">
+
+
+    <!-- CONTACT AREA START -->
+    <div class="contact-area pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    {% include "user_panel.html" %}
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="row">
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" roles="alert">
+                            {{message}}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="selection-title">
+                            <h4 class="title">Lutfen eklediginiz mulke fotograf ekleyin</h4>
+                        </div>
+                        <div class="leave-review">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form.media }} <!--Ckeditor Ayarlarini getirir-->
+                                {{ form.as_p }}
+
+                                <button type="submit" class="submit-btn-1">Save</button>
+                            </form>
+
+                            <p class="form-messege mb-0"></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT AREA END -->
+
+</section>
+<!-- End page content -->
+
+
+{% endblock %}

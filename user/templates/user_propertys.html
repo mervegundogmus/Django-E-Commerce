@@ -1,0 +1,106 @@
+{% extends "homebase.html" %}
+
+{% block title %}User Propertys{% endblock %}
+{% block keywords %} {{setting.description}} {% endblock %}
+{% block description %} {{setting.keywords}} {% endblock %}
+{% block head %}
+
+<link href="{{ setting.icon.url }}" rel="shortcut icon" type="image/x-icon">{% endblock %}
+
+
+{% block content %}
+<!-- BREADCRUMBS AREA START -->
+<div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="breadcrumbs">
+                    <h2 class="breadcrumbs-title">User Propertys</h2>
+                    <ul class="breadcrumbs-list">
+                        <li><a href="/">Anasayfa</a></li>
+                        <li>User Propertys</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS AREA END -->
+
+
+<!-- Start page content -->
+<section class="page-wrapper" id="page-content">
+
+
+    <!-- CONTACT AREA START -->
+    <div class="contact-area pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    {% include "user_panel.html" %}
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="row">
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" roles="alert">
+                            {{message}}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <div class="selection-title">
+                            <h4 class="title">User Propertys List
+                                <br>
+                                <br>
+                            <a class="button-1 btn-block " href="/user/addproperty/" style="display:inline;padding:10px;">Add Property</a>
+                            </h4>
+                        </div>
+                        <br>
+                        <table class="table">
+                            <tr>
+                                <th class="text-left">Image</th>
+                                <th class="text-left">Property</th>
+                                <th class="text-left">Rate</th>
+                                <th class="text-left">Address</th>
+                                <th class="text-left">Price</th>
+                                <th class="text-left">Status</th>
+                                <th class="text-left">Date</th>
+                                <th class="text-left">Edit</th>
+                                <th class="text-left">Delete</th>
+
+                            </tr>
+                            {% for rs in propertys %}
+                            <tr>
+                                <td class="text-left"><img src="{{rs.image.url}}" style="height:30px;"></td>
+                                <td class="text-left">
+                                    <a href="/property/{{rs.id}}/{{ rs.slug }}">
+                                        {{ rs.title }}
+                                    </a>
+                                </td>
+                                <td class="text-left">{{ rs.rate }}</td>
+                                <td class="text-left">{{ rs.address }}</td>
+                                <td class="text-left">{{ rs.price}}</td>
+                                <td class="text-left">{{ rs.status }}</td>
+                                <td class="text-left">{{ rs.create_at }}</td>
+                                <td class="text-left"><a class="btn btn-danger" href="/user/propertyedit/{{rs.id}}">
+                                    Edit</a></td>
+                                <td class="text-left"><a class="btn btn-danger" href="/user/propertydelete/{{rs.id}}"
+                                                         onclick="return confirm('Delete ! Are you sure ?')">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT AREA END -->
+
+</section>
+<!-- End page content -->
+
+
+{% endblock %}

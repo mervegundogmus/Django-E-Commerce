@@ -1,50 +1,49 @@
-{% extends "homebase.html" %}
-{% load static %}
+{% extends 'homebase.html' %}
 
 {% block title %} İletişim - {{ setting.company }} {% endblock %}
-{% block keywords %} {{ setting.keywords }} {% endblock %}
-{% block description %} {{ setting.description }} {% endblock %}
-
+{% block keywords %} {{ setting.keywords }}   {% endblock %}
+{% block description %} {{ setting.description }}  {% endblock %}
 {% block head %}
 <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
 {% endblock %}
-
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
 
 {% block content %}
-	 <div id="contact-page" class="container">
-    	<div class="bg">
-	    	<div class="row">
-
-	    		<div class="col-sm-12">
-					<h2 class="title text-center">Contact <strong>Us</strong></h2>
-
-					</div>
-				</div>
-
-       <div class=""col-sm-9 padding-right">
-
-				<p>{{ setting.contact|safe }}</p>
-
-      </div>
-			</div>
-    		<div class="row">
-
-	    		<div class="col-sm-8">
-	    			<div class="contact-form">
 
 
-				        </form>
-	    			</div>
-	    		</div>
-	    		<div class="col-sm-4">
-	    			<div class="contact-info">
+      <section id="form"><!--form-->
+	<div class="container">
+			<div class="row">
+              <div class="col-md-4">
+                  <div class="billing-detail">
 
+                      <div class="section-title">
+                          <h3 class="title">İletişim Formu</h3>
 
+                      </div>
+                      {% if messages %}
+                      {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }}" role="alert">
+                          {{ message }}
+                      </div>
+                      {% endfor %}
+                  {% endif %}
 
-	    			</div>
-    			</div>
-	    	</div>
-    	</div>
-    </div><!--/#contact-page-->
+                  <form action="" method="post">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      <input type="submit" value="SEND FORM">
+                  </form>
+                  </div>
+              </div>
+
+    <div class="col-md-8">
+        <div class="section-title">
+            <h3 class="title">İletişim Bilgilerimiz</h3>
+        </div>
+        {{ setting.contact | safe }}
+    </div>
+    </div>
+   </div>
 
 {% endblock %}

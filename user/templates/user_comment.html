@@ -1,0 +1,90 @@
+{% extends "homebase.html" %}
+
+{% block title %}User Update{% endblock %}
+{% block keywords %} {{setting.description}} {% endblock %}
+{% block description %} {{setting.keywords}} {% endblock %}
+{% block head %}
+<link rel="shortcut icon" type="image/x-icon" href="{{ setting.icon.url }}">{% endblock %}
+
+
+{% block content %}
+<!-- BREADCRUMBS AREA START -->
+<div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="breadcrumbs">
+                    <h2 class="breadcrumbs-title">User Update</h2>
+                    <ul class="breadcrumbs-list">
+                        <li><a href="/">Anasayfa</a></li>
+                        <li>User Update</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS AREA END -->
+
+
+<!-- Start page content -->
+<section id="page-content" class="page-wrapper">
+
+
+    <!-- CONTACT AREA START -->
+    <div class="contact-area pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    {% include "user_panel.html" %}
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="row">
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" roles="alert">
+                            {{message}}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                         <table class="table">
+                        <tr>
+                            <th class="text-left">Property</th>
+                            <th class="text-left">Rate</th>
+                            <th class="text-left">Subject</th>
+                            <th class="text-left">Comment</th>
+                            <th class="text-left">Status</th>
+                            <th class="text-left">Date</th>
+                            <th class="text-left">Delete</th>
+
+                        </tr>
+                        {% for rs in comments %}
+                        <tr>
+                            <td class="text-left">
+                                <a href="/property/{{rs.property_id}}/{{ rs.property.slug }}">
+                                    {{ rs.property.title }}
+                                </a>
+                            </td>
+                            <td class="text-left">{{ rs.rate }}</td>
+                            <td class="text-left">{{ rs.subject }}</td>
+                            <td class="text-left">{{ rs.comment}}</td>
+                            <td class="text-left">{{ rs.status }}</td>
+                            <td class="text-left">{{ rs.create_at }}</td>
+                            <td class="text-left"><a class="btn btn-danger" href="/user/deletecomment/{{rs.id}}"
+                                                     onclick="return confirm('Delete ! Are you sure ?')">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT AREA END -->
+
+</section>
+<!-- End page content -->
+
+
+{% endblock %}

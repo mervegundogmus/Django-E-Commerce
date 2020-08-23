@@ -1,8 +1,8 @@
 from django.utils.safestring import mark_safe
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
-
-from django.forms import ModelForm
+from ckeditor.widgets import CKEditorWidget
+from django.forms import ModelForm, TextInput, FileInput
 from django.urls import reverse
 from django.contrib.auth.models import User
 from mptt.models import MPTTModel
@@ -109,3 +109,35 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['subject','comment','rate']
+
+class PropertyForm(ModelForm):
+    class Meta:
+        model = Property
+        fields = ['category', 'title', 'keywords', 'price', 'room', 'square_metre', 'floor', 'slug',
+                  'description', 'address', 'image', 'detail']
+        widgets = {
+            'title': TextInput(attrs={'class': 'input', 'placeholder': 'title'}),
+            'slug': TextInput(attrs={'class': 'input', 'placeholder': 'slug'}),
+            'keywords': TextInput(attrs={'class': 'input', 'placeholder': 'keywords'}),
+            'price': TextInput(attrs={'class': 'input', 'placeholder': 'price'}),
+            'room': TextInput(attrs={'class': 'input', 'placeholder': 'room'}),
+            'rate': TextInput(attrs={'class': 'input', 'placeholder': 'rate'}),
+            'floor': TextInput(attrs={'class': 'input', 'placeholder': 'floor'}),
+            'square_metre': TextInput(attrs={'class': 'input', 'placeholder': 'floor'}),
+            'description': TextInput(attrs={'class': 'input', 'placeholder': 'description'}),
+            'address': TextInput(attrs={'class': 'input', 'placeholder': 'address'}),
+            'image': FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
+            'detail': CKEditorWidget(),
+
+        }
+
+class ImagesForm(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title','image']
+        widgets = {
+            'title': TextInput(attrs={'class': 'input', 'placeholder': 'title'}),
+            # 'property':ModelChoiceField(queryset=Property.objects.all()),
+            'image': FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
+
+        }

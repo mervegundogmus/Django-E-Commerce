@@ -1,0 +1,103 @@
+{% extends "homebase.html" %}
+
+{% block title %} User Panel {% endblock %}
+{% block keywords %} {{setting.description}} {% endblock %}
+{% block description %} {{setting.keywords}} {% endblock %}
+{% block head %}
+<link rel="shortcut icon" type="image/x-icon" href="{{ setting.icon.url }}">{% endblock %}
+
+
+{% block content %}
+<!-- BREADCRUMBS AREA START -->
+<div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="breadcrumbs">
+                    <h2 class="breadcrumbs-title">User Paneli</h2>
+                    <ul class="breadcrumbs-list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMBS AREA END -->
+
+
+<!-- Start page content -->
+<section id="page-content" class="page-wrapper">
+
+
+    <!-- CONTACT AREA START -->
+    <div class="contact-area pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    {% include "user_panel.html" %}
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" roles="alert">
+                        {{message}}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+                    <table class="table">
+
+                        <tr>
+                            <th class="text-center"><a href="/user/update/" class="btn btn-warning">Update
+                                Profile</a>
+                                <a href="/user/password/" class="btn btn-warning">Change Password</a></th>
+                            <td class="thumb"><img src="{{ profile.image.url }}" alt=""
+                                                   style="width:100px;height:100px;"></td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Ad Soyad</th>
+                            <td class="thumb">{{ profile.user_name}}</td>
+
+                        </tr>
+                        <tr>
+                            <th class="text-center">Email</th>
+                            <td class="thumb">{{ profile.user.email }}</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Telefon</th>
+                            <td class="thumb">{{ profile.phone }}</td>
+
+                        </tr>
+                        <tr>
+                            <th class="text-center">Facebook</th>
+                            <td class="thumb">{{ profile.facebook }}</td>
+                        </tr>
+                        <tr>
+
+                            <th class="text-center">Skype</th>
+                            <td class="thumb">{{ profile.skype }}</td>
+
+                        </tr>
+                        <tr>
+                            <th class="text-center">Contact Detail</th>
+                            <td class="thumb">{{ profile.contact_detail }}</td>
+                        </tr>
+                        <tr>
+                            <th class="text-center">Ozgecmis</th>
+                            <td class="thumb">{{ profile.biography }}</td>
+                        </tr>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- CONTACT AREA END -->
+
+</section>
+<!-- End page content -->
+
+{% endblock %}

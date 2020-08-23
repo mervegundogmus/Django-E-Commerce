@@ -25,7 +25,7 @@
 									<h2>{{rs.description}}</h2>
                                     <h3>{{rs.metre}}</h3>
 									<p>Kalite, Güven, Konfor</p>
-									<button type="button" class="btn btn-default get">rent now</button>
+                                <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default get"><i class="fa fa-home"></i>rent now</a>
 								</div>
 								<div class="col-sm-6">
 									<img src="{{rs.image.url}}" class="girl img-responsive" alt="" />
