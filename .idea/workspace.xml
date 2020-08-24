@@ -2,49 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcfbf69b-868d-4073-b69d-7eec32efd345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order/migrations/0002_auto_20200823_1947.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/migrations/0003_delete_shopcart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/migrations/0004_shopcart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/migrations/0005_auto_20200823_2018.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/migrations/0006_remove_order_total.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/migrations/0007_order_total.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0008_property_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0009_auto_20200823_1800.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Hepsivilla_2945_1V2pMmB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/antalya_5NzZGIo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/antalya_oBpF9RA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/antalya_uQS5rSy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/antalya_wtzAUuc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/shopcart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_editproperty.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/19e7141e-33bd-4892-9bcd-9435c7bc9307_CC2V8Q8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/1fb3e3f3-b1be-4054-82a7-5c07c44236c1_8WpvVAr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/21cff7ca-b432-4989-b613-2f3d9e5614e9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/54b1c8ef-a4aa-47c8-a36c-55db3e1cb0ab_RubcL6M.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/81e16c07-7c29-4934-a4a5-7fd360a8644e_G9e6gea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Hepsivilla_8303_zdsSjKD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200815-0010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200815-0011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200815-0012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200815-0013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200815-0014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0022.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0026.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0027.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrumkiralikvilla-20200824-0029.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/d0d5435c-62ea-4c67-890b-c5f059477cd0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/d7f2b00f-5b69-41fd-9beb-f992f724ba54_4WYPoQn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim_vDuJAiP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0057.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0058.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0059.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0059_iTXusez.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0060.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0061.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0062.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0063.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0064.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0064_Iu0L04K.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0066.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/mfemlak-20200819-0066_vxcfXtF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/2019-09-02-09-53-25-332.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/2020-05-10-07-43-32-335.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/property_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/property_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/propertys.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/propertys.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/propertys_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/propertys_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renthouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renthouse/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_addimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_addimage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_addproperty.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_addproperty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_propertys.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_propertys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +199,7 @@
       <workItem from="1598134127674" duration="17147000" />
       <workItem from="1598157747236" duration="3488000" />
       <workItem from="1598181276531" duration="864000" />
-      <workItem from="1598182178065" duration="28741000" />
+      <workItem from="1598182178065" duration="40421000" />
     </task>
     <servers />
   </component>
@@ -280,10 +285,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="616" y="114" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597977935954" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1598143062733">
+    <state x="371" y="115" width="981" height="707" key="SettingsEditor" timestamp="1598222246201">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598143062733" />
+    <state x="371" y="115" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598222246201" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597450650151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

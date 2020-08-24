@@ -7,7 +7,7 @@
     <div class="features_items"><!--features_items-->
 
 
-        <h2 class="title text-center">İLANLAR</h2>
+        <h2 class="title text-center">ESKİ İLANLAR</h2>
 
         {% for rs in daypropertys %}
             <div class="col-sm-4">
@@ -19,7 +19,7 @@
                             <h2>{{ rs.title }}</h2>
                             <h4>{{ rs.description }}</h4>
                             <h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
-                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Görüntüle</a>
+                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-search"></i>Görüntüle</a>
 
 
                         </div>
@@ -45,7 +45,7 @@
                             <h2>{{ rs.title }}</h2>
                             <h4>{{ rs.description }}</h4>
                             <h2 class="title text-center">Fiyat:{{ rs.price }}₺</h2>
-                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-home"></i>Görüntüle</a>
+                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-search"></i>Görüntüle</a>
 
                         </div>
                         <img src="{% static 'images/home/sale.png' %}" class="sale" alt=""/>

@@ -87,40 +87,7 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 
 								<li><a href="/" class="">Anasayfa</a></li>
-
-
-
-								<li class="dropdown"><a href="/ilanlar/0">Emlak<i class="fa fa-angle-down"></i></a>
-                                {% load mptt_tags %}
-
-
-                                    <ul role="menu" class="sub-menu">
-
-                                         {% recursetree category %}
-
-                                             <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }} </a></li>
-
-					                	{% if not node.is_leaf_node %}
-                            <ul class="children">
-
-
-
-                                        </li>
-
-                                    </ul> {% endif %}
-
-                                </li>{% endrecursetree %}
-
-
-
-                                    </ul>
-                                </li>
-
-
-
                                  <li><a href="/ilanlar/0">İlanlar</a></li>
-
-
                                 <li><a href="/hakkimizda">Hakkımızda</a></li>
 								<li><a href="/referanslar">Referanslar</a></li>
 								<li><a href="/iletisim">İletişim</a></li>

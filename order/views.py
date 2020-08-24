@@ -13,29 +13,29 @@ def index(request):
     return HttpResponse("Order Page")
 
 
-@login_required(login_url='/login')
+@login_required(login_url='/login') #Check Login
 def addurun(request, id):
-    url = request.META.get("HTTP_REFERER")
+    url = request.META.get("HTTP_REFERER") # get last url
     if request.method == 'POST':
         form = ShopCartForm(request.POST)
         if form.is_valid():
-            current_user = request.user
+            current_user = request.user #Access User Session information
             if (ShopCart.objects.filter(urun_id=id)):
                 data = ShopCart.objects.get(urun_id=id)
-                data.ay += form.cleaned_data['ay']
+                data.ay += form.cleaned_data['ay'] #tekrar ev eklenmişse ay larını birleştiriyo
                 data.save()
             else:
-                data = ShopCart()
-                data.user_id = current_user.id
+                data = ShopCart() # model ile bağlantı kur
+                data.user_id = current_user.id   #current yani mevcut user
                 data.urun_id = id
-                data.ay = form.cleaned_data['ay']
-                data.save()
+                data.ay = form.cleaned_data['ay'] #hocanin ki quantity
+                data.save()  # veritabanına kaydet
             request.session['cart_item'] = ShopCart.objects.filter(user_id=current_user.id).count()
         messages.success(request, "Ev başarıyla eklendi.")
         return HttpResponseRedirect(url)
-
+        #return HttpResponse("Kaydedildi")
     else:
-        messages.warning(request, "Ev gönderilemedi. Lütfen tekrar deneyiniz belirtiniz.")
+        messages.warning(request, "Ev gönderilemedi. Lütfen tekrar deneyiniz.")
         return HttpResponseRedirect(url)
 
 
@@ -44,19 +44,19 @@ def addurun(request, id):
 
 @login_required(login_url='/login')
 def deletefromcart(request, id):
-    current_user = request.user
+    current_user = request.user #Access User Session information
     ShopCart.objects.filter(id=id).delete()
     messages.success(request, 'Ev sepetden silinmistir')
     request.session['cart_item'] = ShopCart.objects.filter(user_id=current_user.id).count()
     return HttpResponseRedirect('/user/shopcart')
 
 
-@login_required(login_url='/login')
+@login_required(login_url='/login') #Check login
 def siparis(request,id):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
 
-    current_user = request.user #su anki userin bilgilerini aliyor
+    current_user = request.user # #Access User Session information, şu anki userin bilgilerini aliyor
     schopcart=ShopCart.objects.get(pk=id)
     total=schopcart.ay*schopcart.urun.price
     if id: #shopcartdan id gelmisse
@@ -65,7 +65,7 @@ def siparis(request,id):
         data.status = 'New'
         data.total=total
         data.ip = request.META.get('REMOTE_ADDR')
-        data.save()#aktarilan verileri kayd ediyor
+        data.save()#aktarilan verileri kaydediyor
 
         schopcart = ShopCart.objects.get(pk=id) #Shopcartdan gelen  idli veriyi OrderProducta ekliyor
         #orderproducta ekleme
@@ -79,10 +79,10 @@ def siparis(request,id):
         detail.status = 'New'
         detail.save()
         ShopCart.objects.get(pk=id).delete()#shopcartdan alinan veriyi siliyor
-        prodata=Property.objects.get(pk=schopcart.urun_id)#shopcartdan sifaris verilen urunu aliyor
-        prodata.status="False"#statusunu flase yapiyor
+        prodata=Property.objects.get(pk=schopcart.urun_id)#shopcartdan siparis verilen urunu aliyor
+        prodata.status="False"#statusunu false yapiyor
         prodata.save()
-        messages.success(request, 'Sifarisiniz Basariyla Alinmistir')#basarili islem mesaji
+        messages.success(request, 'Siparisiniz Basariyla Alinmistir')#basarili islem mesaji
         context = {
             'setting': setting,
             'category' : category,
