@@ -1,1 +1,1 @@
-"# renthouse" 
+"# Django E Ticaret Projesi" 
