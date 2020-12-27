@@ -1,1 +1,1 @@
-"# Django E Ticaret Projesi" 
+"# Django E Ticaret Emlak Projesi" 
