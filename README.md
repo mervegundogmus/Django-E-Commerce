@@ -1,1 +1,1 @@
-"# Django E Ticaret Emlak Projesi" 
+"# Real Estate✨🏡" 
