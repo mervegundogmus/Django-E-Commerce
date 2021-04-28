@@ -1,6 +1,6 @@
 # Real Estate
 
-This project is a multilingual and multi-currency e-commerce Python Django web project.
+This project is a multilingual and multi-currency e-commerce real estate web project developed using the Python Django Framework.
 
 ## Before running this project you need intall below list apps and packages
 
