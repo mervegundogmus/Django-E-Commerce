@@ -14,6 +14,11 @@ pip install django-currencies<br>
 pip install django-mptt<br>
 pip install Pillow<br>
 
-<b>For running</b> <br>
+## For running
 
-python manage.py runserver<br>
+python manage.py runserver
+
+# Home Pages
+![github](templates/home/IMG-01.jpeg)<br>
+
+![github](templates/home/MP4-01.mp4)<br>
