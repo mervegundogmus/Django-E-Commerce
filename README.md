@@ -19,10 +19,5 @@ pip install Pillow<br>
 python manage.py runserver
 
 # Home Pages
-![github](home/templates/github-01.jpg)
+![github](home/templates/github.jpg)<br>
 
-![github](home/templates/github-02.jpg)<br>
-
-![github](home/templates/github-03.jpg)
-
-![github](home/templates/github-04.jpg)<br>
