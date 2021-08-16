@@ -2,7 +2,7 @@
 
 This project is a multilingual and multi-currency e-commerce real estate web project developed using the Python Django Framework.
 
-## Before running this project you need intall below list apps and packages
+## Before running this project you need install below list apps and packages
 
 Install Python 3.7 or above -> https://www.python.org/<br>
 Install Pip   -> python get-pip.py<br>
