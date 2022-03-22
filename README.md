@@ -1,6 +1,6 @@
 # Real Estate
 
-This project is a multilingual and multi-currency e-commerce real estate web project developed using the Python Django Framework.
+This project is a real estate agent site controlled by admin where homeowners who are members of the system can add advertisements and rent a house.
 
 ## Before running this project you need install below list apps and packages
 
